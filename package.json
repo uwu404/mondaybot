@@ -1,0 +1,26 @@
+{
+  "name": "mondaybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.0",
+    "@discordjs/voice": "^0.8.0",
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-node": "^3.13.0",
+    "canvas": "^2.8.0",
+    "discord.js": "^13.3.1",
+    "html-entities": "^2.3.2",
+    "libsodium-wrappers": "^0.7.9",
+    "mongoose": "^5.12.8",
+    "node-fetch": "^2.6.1",
+    "opusscript": "0.0.8",
+    "play-dl": "^1.8.2"
+  }
+}
