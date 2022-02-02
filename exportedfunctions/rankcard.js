@@ -1,5 +1,4 @@
 import Canvas from "canvas"
-Canvas.registerFont("assets/arial-unicode-ms.ttf", { family: "Arial unicode ms" })
 
 const calculateWidthAndHeight = (width, height) => {
     const h = height / width * 934

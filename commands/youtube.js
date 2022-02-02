@@ -7,8 +7,8 @@ export default {
     aliases: ["yt"],
     cooldown: 2,
     async execute(message, _, args) {
-        const video = await Youtube(args.join("+"), 1)
-            .catch(() => message.reply("oops seems like i can't find anything for that"))
+        const video = await Youtube(args.join("+"), 1).catch(() => null)
+        if (!video) return message.reply("oops seems like i can't find anything for that")
         message.channel.send(video)
     }
 }

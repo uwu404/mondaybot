@@ -3,6 +3,11 @@ import fs from "fs"
 import mongoose from "mongoose"
 import Member from "./models/member.js"
 import Server from "./models/server.js"
+import Canvas from "canvas"
+
+Canvas.registerFont("assets/arial-unicode-ms.ttf", { family: "Arial unicode ms" })
+Canvas.registerFont("assets/whitney-400.ttf", { family: "whitney", weight: "400" })
+Canvas.registerFont("assets/whitney-500.ttf", { family: "whitney", weight: "500" })
 
 const { FLAGS } = Discord.Intents
 const client = new Discord.Client({

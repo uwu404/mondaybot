@@ -25,7 +25,7 @@ export default {
     aliases: ["ratemyface", "rateme"],
     cooldown: 10,
     async execute(message) {
-        const attachment = message.attachments.first().url
+        const attachment = message.attachments.first()?.url || (message.mentions.users.first() || message.author).displayAvatarURL({ format: "png" })
         if (!attachment) return message.reply("You need to attach a PNG or JPG image")
         if ((!attachment.includes(".png") && !attachment.includes(".jpg")) || attachment.includes(".webp")) return message.channel.send("Error: unsupported image type")
         const data = await fetch(attachment).then(res => res.buffer())

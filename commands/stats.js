@@ -9,9 +9,9 @@ export default {
         const embed = new MessageEmbed()
             .setAuthor(client.user.tag, client.user.displayAvatarURL({ dynamic: true }))
             .addFields(
-                { name: "Users", value: client.users.cache.size, inline: true },
-                { name: "Servers", value: client.guilds.cache.size, inline: true },
-                { name: "Uptime", value: new Date(os.uptime() * 1000).toISOString().substr(11, 8), inline: true }
+                { name: "Users", value: `${client.users.cache.size}`, inline: true },
+                { name: "Servers", value: `${client.guilds.cache.size}`, inline: true },
+                { name: "Uptime", value: new Date(os.uptime() * 1000).toISOString().substring(11, 19), inline: true }
             )
             .setColor("RANDOM")
 

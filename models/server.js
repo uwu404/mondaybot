@@ -2,9 +2,11 @@ import mongoose from "mongoose"
 
 const serverSchema = new mongoose.Schema({
     id: String,
+    accent: String,
+    backGround: String,
     rewards: [{
         level: Number,
-        role: String
+        role: String,
     }]
 })
 

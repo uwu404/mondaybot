@@ -6,7 +6,7 @@ export default {
     description: "creates a meme.\nusage: &create <caption> (require attached image)",
     category: "memes",
     async execute(message, _, args) {
-        const imgsrc = message.attachments.array()[0]?.proxyURL
+        const imgsrc = message.attachments.first()?.url
         if (!imgsrc) return message.channel.send("an image needs to attached")
         const image = new Canvas.Image()
         image.onload = () => {
